@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --verbose",
+    "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='**/*.{ts,tsx}|src/**/' --collectCoverageFrom='!**/*.{types,stories,constants,test,spec,d}.{ts,tsx}|src/reportWebVitals.ts'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
