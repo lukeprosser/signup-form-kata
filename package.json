@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --verbose",
-    "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='**/*.{ts,tsx}|src/**/' --collectCoverageFrom='!**/*.{types,stories,constants,test,spec,d}.{ts,tsx}|src/reportWebVitals.ts'",
+    "coverage": "react-scripts test --coverage --watchAll --collectCoverageFrom='src/{pages,components}/**/*.{ts,tsx}' --collectCoverageFrom='!src/{pages,components}/**/*.{types,stories,constants,test,spec,d}.{ts,tsx}'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

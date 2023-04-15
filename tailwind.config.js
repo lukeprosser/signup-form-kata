@@ -22,6 +22,9 @@ module.exports = {
           900: 'hsl(249, 10%, 26%)',
         },
       },
+      backgroundImage: {
+        intro: "url('../src/assets/images/bg-intro-desktop.png')",
+      },
     },
   },
   plugins: [],
