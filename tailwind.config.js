@@ -22,6 +22,9 @@ module.exports = {
           900: 'hsl(249, 10%, 26%)',
         },
       },
+      dropShadow: {
+        custom: '0px 8px 0px rgb(0,0,0,0.15)',
+      },
       backgroundImage: {
         intro: "url('../src/assets/images/bg-intro-desktop.png')",
       },
