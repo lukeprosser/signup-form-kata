@@ -11,11 +11,19 @@ module.exports = {
       },
       colors: {
         primary: {
-          red: 'hsl(0, 100%, 74%)',
-          green: 'hsl(154, 59%, 51%)',
+          red: {
+            500: 'hsl(0, 100%, 74%)',
+          },
+          green: {
+            100: 'hsl(154, 59%, 61%)',
+            500: 'hsl(154, 59%, 51%)',
+            900: 'hsl(154, 59%, 31%)',
+          },
         },
         accent: {
-          blue: 'hsl(248, 32%, 49%)',
+          blue: {
+            500: 'hsl(248, 32%, 49%)',
+          },
         },
         neutral: {
           100: 'hsl(246, 25%, 77%)',
@@ -23,7 +31,7 @@ module.exports = {
         },
       },
       dropShadow: {
-        custom: '0px 8px 0px rgb(0,0,0,0.15)',
+        base: '0px 8px 0px rgb(0,0,0,0.15)',
       },
       backgroundImage: {
         intro: "url('../src/assets/images/bg-intro-desktop.png')",
