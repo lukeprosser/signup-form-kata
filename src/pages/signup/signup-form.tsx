@@ -3,6 +3,9 @@ import ErrorIcon from '../../assets/icons/error';
 
 type Inputs = {
   firstName: string;
+  lastName: string;
+  emailAddress: string;
+  password: string;
 };
 
 export default function SignupForm() {
@@ -16,7 +19,7 @@ export default function SignupForm() {
   return (
     <div className="p-4 bg-white rounded-lg drop-shadow-base">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="my-2">
+        <div className="relative my-2">
           <label htmlFor="firstName" hidden>
             First Name
           </label>
@@ -25,7 +28,7 @@ export default function SignupForm() {
             placeholder="First Name"
             {...register('firstName', { required: true })}
             aria-invalid={errors.firstName ? 'true' : 'false'}
-            className={`relative w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+            className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
               errors.firstName
                 ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
                 : 'border-gray-300'
@@ -33,7 +36,7 @@ export default function SignupForm() {
           />
           {errors.firstName?.type === 'required' && (
             <>
-              <div className="absolute top-10 right-11">
+              <div className="absolute top-4 right-7">
                 <ErrorIcon />
               </div>
               <p
@@ -41,6 +44,98 @@ export default function SignupForm() {
                 className="mt-1 text-[0.65rem] font-medium italic text-right text-primary-red-500"
               >
                 First Name cannot be empty
+              </p>
+            </>
+          )}
+        </div>
+        <div className="relative my-2">
+          <label htmlFor="lastName" hidden>
+            Last Name
+          </label>
+          <input
+            type="text"
+            placeholder="Last Name"
+            {...register('lastName', { required: true })}
+            aria-invalid={errors.lastName ? 'true' : 'false'}
+            className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              errors.lastName
+                ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
+                : 'border-gray-300'
+            }`}
+          />
+          {errors.lastName?.type === 'required' && (
+            <>
+              <div className="absolute top-4 right-7">
+                <ErrorIcon />
+              </div>
+              <p
+                role="alert"
+                className="mt-1 text-[0.65rem] font-medium italic text-right text-primary-red-500"
+              >
+                Last Name cannot be empty
+              </p>
+            </>
+          )}
+        </div>
+        <div className="relative my-2">
+          <label htmlFor="emailAddress" hidden>
+            Email Address
+          </label>
+          <input
+            type="text"
+            placeholder="Email Address"
+            {...register('emailAddress', {
+              required: true,
+              pattern:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            })}
+            aria-invalid={errors.emailAddress ? 'true' : 'false'}
+            className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              errors.emailAddress
+                ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
+                : 'border-gray-300'
+            }`}
+          />
+          {(errors.emailAddress?.type === 'required' ||
+            errors.emailAddress?.type === 'pattern') && (
+            <>
+              <div className="absolute top-4 right-7">
+                <ErrorIcon />
+              </div>
+              <p
+                role="alert"
+                className="mt-1 text-[0.65rem] font-medium italic text-right text-primary-red-500"
+              >
+                Looks like this is not an email
+              </p>
+            </>
+          )}
+        </div>
+        <div className="relative my-2">
+          <label htmlFor="password" hidden>
+            Password
+          </label>
+          <input
+            type="text"
+            placeholder="Password"
+            {...register('password', { required: true })}
+            aria-invalid={errors.password ? 'true' : 'false'}
+            className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              errors.password
+                ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
+                : 'border-gray-300'
+            }`}
+          />
+          {errors.password?.type === 'required' && (
+            <>
+              <div className="absolute top-4 right-7">
+                <ErrorIcon />
+              </div>
+              <p
+                role="alert"
+                className="mt-1 text-[0.65rem] font-medium italic text-right text-primary-red-500"
+              >
+                Password cannot be empty
               </p>
             </>
           )}
