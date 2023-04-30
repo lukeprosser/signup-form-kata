@@ -8,13 +8,17 @@ type Inputs = {
   password: string;
 };
 
-export default function SignupForm() {
+export default function SignupForm({ signup }: { signup: Function }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    signup(data);
+    reset();
+  };
 
   return (
     <div className="p-4 bg-white rounded-lg drop-shadow-base">
@@ -82,7 +86,7 @@ export default function SignupForm() {
             Email Address
           </label>
           <input
-            type="text"
+            type="email"
             placeholder="Email Address"
             {...register('emailAddress', {
               required: true,
@@ -116,7 +120,7 @@ export default function SignupForm() {
             Password
           </label>
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             {...register('password', { required: true })}
             aria-invalid={errors.password ? 'true' : 'false'}

@@ -1,5 +1,6 @@
 import Banner from '../../components/banner/banner';
 import SignupForm from './signup-form';
+import { signup } from '../../utils/signup';
 
 export default function SignupPage() {
   return (
@@ -25,7 +26,7 @@ export default function SignupPage() {
             </Banner>
           </div>
           <div className="mt-10">
-            <SignupForm />
+            <SignupForm signup={signup} />
           </div>
         </div>
       </section>
