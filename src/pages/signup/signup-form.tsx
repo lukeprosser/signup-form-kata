@@ -50,7 +50,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               placeholder="First Name"
               {...register('firstName', { required: true })}
               aria-invalid={errors.firstName ? 'true' : 'false'}
-              className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              className={`w-full py-4 px-5 lg:py-5 lg:px-9 font-semibold text-gray-500 placeholder-gray-500 border rounded-md ${
                 errors.firstName
                   ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
                   : 'border-gray-300'
@@ -58,7 +58,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
             />
             {errors.firstName?.type === 'required' && (
               <>
-                <div className="absolute top-4 right-7">
+                <div className="absolute top-4 lg:top-5 right-7">
                   <ErrorIcon />
                 </div>
                 <p
@@ -79,7 +79,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               placeholder="Last Name"
               {...register('lastName', { required: true })}
               aria-invalid={errors.lastName ? 'true' : 'false'}
-              className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              className={`w-full py-4 px-5 lg:py-5 lg:px-9 font-semibold text-gray-500 placeholder-gray-500 border rounded-md ${
                 errors.lastName
                   ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
                   : 'border-gray-300'
@@ -87,7 +87,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
             />
             {errors.lastName?.type === 'required' && (
               <>
-                <div className="absolute top-4 right-7">
+                <div className="absolute top-4 lg:top-5 right-7">
                   <ErrorIcon />
                 </div>
                 <p
@@ -112,7 +112,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
                   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
               })}
               aria-invalid={errors.emailAddress ? 'true' : 'false'}
-              className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              className={`w-full py-4 px-5 lg:py-5 lg:px-9 font-semibold text-gray-500 placeholder-gray-500 border rounded-md ${
                 errors.emailAddress
                   ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
                   : 'border-gray-300'
@@ -121,7 +121,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
             {(errors.emailAddress?.type === 'required' ||
               errors.emailAddress?.type === 'pattern') && (
               <>
-                <div className="absolute top-4 right-7">
+                <div className="absolute top-4 lg:top-5 right-7">
                   <ErrorIcon />
                 </div>
                 <p
@@ -142,7 +142,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               placeholder="Password"
               {...register('password', { required: true })}
               aria-invalid={errors.password ? 'true' : 'false'}
-              className={`w-full p-4 text-sm font-semibold text-gray-500 placeholder-gray-500 border-2 rounded-md ${
+              className={`w-full py-4 px-5 lg:py-5 lg:px-9 font-semibold text-gray-500 placeholder-gray-500 border rounded-md ${
                 errors.password
                   ? 'border-primary-red-500 focus:border-primary-red-500 text-primary-red-500 placeholder-primary-red-500'
                   : 'border-gray-300'
@@ -150,7 +150,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
             />
             {errors.password?.type === 'required' && (
               <>
-                <div className="absolute top-4 right-7">
+                <div className="absolute top-4 lg:top-5 right-7">
                   <ErrorIcon />
                 </div>
                 <p

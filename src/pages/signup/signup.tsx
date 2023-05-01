@@ -11,7 +11,7 @@ export default function SignupPage() {
             <h2 className="mb-6 text-3xl font-bold leading-10 text-shadow-sm lg:text-6xl lg:mb-10">
               Learn to code by watching others
             </h2>
-            <p className="font-medium leading-7 text-shadow-sm lg:text-xl">
+            <p className="text-lg font-medium leading-7 text-shadow-sm lg:text-xl">
               See how experienced developers solve problems in real-time.
               Watching scripted tutorials is great, but understanding how
               developers think is invaluable.
@@ -26,7 +26,7 @@ export default function SignupPage() {
                 </p>
               </Banner>
             </div>
-            <div className="mt-10">
+            <div className="mt-8">
               <SignupForm signup={signup} />
             </div>
           </div>
