@@ -26,7 +26,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg drop-shadow-base">
+    <div className="px-8 py-4 bg-white rounded-lg drop-shadow-base lg:px-10 lg:py-6">
       {signupSuccess ? (
         <div className="px-10 py-5 text-center text-gray-500">
           <h3 className="mb-6 text-2xl font-medium leading-10 text-shadow-sm">
@@ -41,7 +41,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="relative my-2">
+          <div className="relative my-4">
             <label htmlFor="firstName" hidden>
               First Name
             </label>
@@ -70,7 +70,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               </>
             )}
           </div>
-          <div className="relative my-2">
+          <div className="relative my-4">
             <label htmlFor="lastName" hidden>
               Last Name
             </label>
@@ -99,7 +99,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               </>
             )}
           </div>
-          <div className="relative my-2">
+          <div className="relative my-4">
             <label htmlFor="emailAddress" hidden>
               Email Address
             </label>
@@ -133,7 +133,7 @@ export default function SignupForm({ signup }: { signup: Function }) {
               </>
             )}
           </div>
-          <div className="relative my-2">
+          <div className="relative my-4">
             <label htmlFor="password" hidden>
               Password
             </label>
@@ -162,12 +162,14 @@ export default function SignupForm({ signup }: { signup: Function }) {
               </>
             )}
           </div>
-          <button className="w-full p-4 my-2 text-white uppercase rounded-md bg-primary-green-500 text-shadow-sm hover:bg-primary-green-100 drop-shadow-[0px_4px_0px_#2BA671]">
+          <button className="w-full p-4 mb-2 text-white uppercase rounded-md bg-primary-green-500 text-shadow-sm hover:bg-primary-green-100 drop-shadow-[0px_4px_0px_#2BA671]">
             Claim your free trial
           </button>
           <p className="px-2 mt-2 text-xs font-medium leading-5 text-center text-gray-400">
             By clicking the button, you are agreeing to our{' '}
-            <span className="text-primary-red-500">Terms and Services</span>
+            <span className="font-bold text-primary-red-500">
+              Terms and Services
+            </span>
           </p>
         </form>
       )}
