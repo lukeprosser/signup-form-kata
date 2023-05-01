@@ -2,7 +2,7 @@
 
 Code challenge to implement a responsive signup form based on provided designs.
 
-[Live demo](https://github.com/facebook/create-react-app)
+[Live demo](https://signup-form-kata.vercel.app/)
 
 ## Technologies
 
