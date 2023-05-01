@@ -6,7 +6,7 @@ export default function SignupPage() {
   return (
     <div className="bg-center bg-no-repeat bg-cover bg-intro bg-primary-red-500">
       <div className="flex justify-center">
-        <section className="flex flex-col items-center justify-center min-h-screen p-8 max-w-screen-2xl md:gap-8 lg:gap-10 lg:flex-row">
+        <section className="flex flex-col items-center justify-center min-h-screen px-8 py-32 max-w-screen-2xl md:gap-8 lg:gap-10 lg:flex-row">
           <div className="max-w-lg text-center text-white lg:w-1/2 lg:text-left lg:max-w-none">
             <h2 className="mb-6 text-3xl font-bold leading-10 text-shadow-sm lg:text-6xl lg:mb-10">
               Learn to code by watching others
